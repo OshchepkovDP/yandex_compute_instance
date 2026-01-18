@@ -1,12 +1,3 @@
-terraform {
-  required_providers {
-    yandex = {
-      source = "yandex-cloud/yandex"
-    }
-  }
-  required_version = ">=1.12.0"  ### some test 29.10.2025
-}
-
 locals {
   labels = length(keys(var.labels)) >0 ? var.labels: {
     "env"=var.env_name
